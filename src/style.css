@@ -1,0 +1,12 @@
+* {
+    border: 2px solid red;
+}
+
+#logo {
+    height: 100px;
+    width: 100px;
+}
+
+#food-1, #food-2 {
+    max-width: 70vw;
+}

@@ -2,6 +2,33 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/load-about.js":
+/*!***************************!*\
+  !*** ./src/load-about.js ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+const about = function () {
+    console.log("loading about page!");
+
+    //wipe current content
+    const content = document.getElementById("content");
+    content.innerHTML = '';
+
+    //load about page (temp)
+    const temp = document.createElement("div");
+    temp.textContent = "Hi! I'm an about page!"
+    content.appendChild(temp);
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (about);
+
+/***/ }),
+
 /***/ "./src/populate-content.js":
 /*!*********************************!*\
   !*** ./src/populate-content.js ***!
@@ -124,6 +151,8 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _populate_content_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./populate-content.js */ "./src/populate-content.js");
+/* harmony import */ var _load_about_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./load-about.js */ "./src/load-about.js");
+
 
 
 console.log("Hi, I am from index.js!");
@@ -134,6 +163,12 @@ console.log("Hi, I am from index.js!");
 //next: set event listeners on nav buttons to wipe div#content 
 // and run the appropriate tab module.
 
+// nav buttons
+const homeBtn = document.getElementById("home");
+const menuBtn = document.getElementById("menu");
+const aboutBtn = document.getElementById("about");
+
+aboutBtn.addEventListener('click', _load_about_js__WEBPACK_IMPORTED_MODULE_1__["default"]);
 
 })();
 

@@ -17,7 +17,6 @@ __webpack_require__.r(__webpack_exports__);
 
 const populate = function () {
     console.log ("I'm here, from populate-content.js!")
-    //next: add the content found in comments of index.html here.
 
     const content = document.getElementById("content");
     const header = document.querySelector("header");
@@ -130,6 +129,10 @@ __webpack_require__.r(__webpack_exports__);
 console.log("Hi, I am from index.js!");
 
 (0,_populate_content_js__WEBPACK_IMPORTED_MODULE_0__["default"])();
+
+
+//next: set event listeners on nav buttons to wipe div#content 
+// and run the appropriate tab module.
 
 
 })();

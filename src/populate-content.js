@@ -3,7 +3,6 @@
 
 const populate = function () {
     console.log ("I'm here, from populate-content.js!")
-    //next: add the content found in comments of index.html here.
 
     const content = document.getElementById("content");
     const header = document.querySelector("header");

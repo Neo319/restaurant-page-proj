@@ -10,3 +10,9 @@
 #food-1, #food-2 {
     max-width: 70vw;
 }
+
+header, #content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

@@ -1,25 +1,18 @@
-// module to populate website page with its content
+// module to populate website page with homepage content
 
 
 const populate = function () {
     console.log ("I'm here, from populate-content.js!")
-
+    
     const content = document.getElementById("content");
-    const header = document.querySelector("header");
+    content.innerHTML = ''; //wipe any existing content before loading 
 
     //test
     const temp = document.createElement("div");
     temp.textContent = "content...";
     content.appendChild(temp);
 
-    //header logo    
-    const logo = new Image()
-    logo.src = "../src/logo.png"
-    logo.id = "logo"
-    header.insertBefore(logo, header.firstChild)
-
-
-
+    
     //first image
     const firstCard = document.createElement("div");
     const firstCardImage = new Image();

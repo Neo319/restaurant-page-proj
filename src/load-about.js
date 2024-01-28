@@ -1,3 +1,5 @@
+//module for loading about page
+
 const about = function () {
     console.log("loading about page!");
 

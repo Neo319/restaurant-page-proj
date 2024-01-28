@@ -12,6 +12,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//module for loading about page
+
 const about = function () {
     console.log("loading about page!");
 
@@ -29,6 +31,56 @@ const about = function () {
 
 /***/ }),
 
+/***/ "./src/load-logo.js":
+/*!**************************!*\
+  !*** ./src/load-logo.js ***!
+  \**************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// module for loading the logo inside the header element.
+
+const loadLogo = function () {
+    const header = document.querySelector('header');
+
+    const logo = new Image()
+    logo.src = "../src/logo.png"
+    logo.id = "logo"
+    header.insertBefore(logo, header.firstChild)
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (loadLogo);
+
+/***/ }),
+
+/***/ "./src/load-menu.js":
+/*!**************************!*\
+  !*** ./src/load-menu.js ***!
+  \**************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//module for loading menu page
+
+const menu = function () {
+    console.log("loading menu page");
+
+    const content = document.getElementById("content");
+    content.innerHTML = '';
+
+    content.textContent = "Menu page here!"
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (menu);
+
+/***/ }),
+
 /***/ "./src/populate-content.js":
 /*!*********************************!*\
   !*** ./src/populate-content.js ***!
@@ -39,28 +91,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-// module to populate website page with its content
+// module to populate website page with homepage content
 
 
 const populate = function () {
     console.log ("I'm here, from populate-content.js!")
-
+    
     const content = document.getElementById("content");
-    const header = document.querySelector("header");
+    content.innerHTML = ''; //wipe any existing content before loading 
 
     //test
     const temp = document.createElement("div");
     temp.textContent = "content...";
     content.appendChild(temp);
 
-    //header logo    
-    const logo = new Image()
-    logo.src = "../src/logo.png"
-    logo.id = "logo"
-    header.insertBefore(logo, header.firstChild)
-
-
-
+    
     //first image
     const firstCard = document.createElement("div");
     const firstCardImage = new Image();
@@ -152,11 +197,15 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _populate_content_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./populate-content.js */ "./src/populate-content.js");
 /* harmony import */ var _load_about_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./load-about.js */ "./src/load-about.js");
+/* harmony import */ var _load_menu_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./load-menu.js */ "./src/load-menu.js");
+/* harmony import */ var _load_logo_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./load-logo.js */ "./src/load-logo.js");
+
+
 
 
 
 console.log("Hi, I am from index.js!");
-
+(0,_load_logo_js__WEBPACK_IMPORTED_MODULE_3__["default"])();
 (0,_populate_content_js__WEBPACK_IMPORTED_MODULE_0__["default"])();
 
 
@@ -168,7 +217,11 @@ const homeBtn = document.getElementById("home");
 const menuBtn = document.getElementById("menu");
 const aboutBtn = document.getElementById("about");
 
+homeBtn.addEventListener('click', _populate_content_js__WEBPACK_IMPORTED_MODULE_0__["default"]);
+menuBtn.addEventListener('click', _load_menu_js__WEBPACK_IMPORTED_MODULE_2__["default"])
 aboutBtn.addEventListener('click', _load_about_js__WEBPACK_IMPORTED_MODULE_1__["default"]);
+
+
 
 })();
 

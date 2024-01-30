@@ -19,6 +19,7 @@ header {
 
 #content {
     background-color: #C9D7DD;
+    min-height: 100vh;
 }
 
 #logoDiv {
@@ -103,6 +104,11 @@ header, #content {
     padding: 10px;
 }
 
+.menu-item {
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
+
 
 @media only screen and (min-width: 700px) {
     
@@ -143,6 +149,11 @@ header, #content {
     #FCtext button, #SCtext button {
         font-size: 1.5vw;
         margin-bottom: 10vh;
+    }
+
+    .menu-item {
+        margin-left: 30vw;
+        margin-right: 30vw;
     }
 
 }

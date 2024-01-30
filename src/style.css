@@ -1,18 +1,50 @@
 * {
     border: 1px solid red;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+
 
 #logo {
     height: 100px;
     width: 100px;
 }
 
-#food-1, #food-2 {
-    max-width: 70vw;
-}
+
 
 header, #content {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.food-img {
+    filter: brightness(50%);
+    border-radius: 5px;
+    width: 85vw;
+    
+    object-fit: cover;
+    height: 35vh;
+    margin: 20px;
+}
+
+#firstCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#FCtext {
+    position: absolute;
+    color: white;
+    z-index: 1;
+}
+
+
+@media only screen and (min-width = 700px) {
+    .food-img {
+        height: 70vh;
+    }
 }

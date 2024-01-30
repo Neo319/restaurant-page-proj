@@ -15,10 +15,25 @@ const populate = function () {
     
     //first image
     const firstCard = document.createElement("div");
+    firstCard.id= "firstCard"
     const firstCardImage = new Image();
     firstCardImage.src = '../src/food-1.jpg';
     firstCardImage.id = 'food-1';
+    firstCardImage.classList = "food-img";
     firstCardImage.alt = "french toast with berries";
+
+    //contents of first card displayed over image
+    const firstCardText = document.createElement("div");
+    const FCHeader = document.createElement("h3");
+    const FCbody = document.createElement("p");
+    FCHeader.textContent = "Header";
+    FCbody.textContent = "lorem uspum sum doloret ... etc."
+    firstCardText.id = "FCtext"
+    
+    firstCardText.appendChild(FCHeader);
+    firstCardText.appendChild(FCbody);
+    firstCard.appendChild(firstCardText);
+
 
     firstCard.appendChild(firstCardImage);
     content.appendChild(firstCard);
@@ -26,9 +41,11 @@ const populate = function () {
 
     //second image
     const secondCard = document.createElement("div");
+    secondCard.id = "secondCard"
     const secondCardImage = new Image();
     secondCardImage.src = '../src/food-2.jpg';
     secondCardImage.id = 'food-2';
+    secondCardImage.classList = "food-img"
     secondCardImage.alt= "chicken noodle soup";
 
     secondCard.appendChild(secondCardImage);

@@ -100,7 +100,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var _load_menu_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./load-menu.js */ "./src/load-menu.js");
 // module to populate website page with homepage content
+
+
 
 
 const populate = function () {
@@ -124,7 +127,7 @@ const populate = function () {
     const firstCardText = document.createElement("div");
     const FCHeader = document.createElement("h3");
     const FCbody = document.createElement("p");
-    FCHeader.textContent = "BREAKFAST SANDWICH SPECIAL NOW 90% OFF!";
+    FCHeader.textContent = "BREAKFAST SANDWICH SPECIAL";
     FCbody.textContent = "Don't miss out on the heavenly goodness of our french toast and berry breakfast sandwiches, now available for a limited time at 90% OFF!";
     firstCardText.id = "FCtext"
 
@@ -173,6 +176,11 @@ const populate = function () {
     secondCard.appendChild(secondCardImage);
     secondCard.appendChild(secondCardText);
     content.appendChild(secondCard);
+
+
+    // both buttons will load the menu tab
+    FCbtn.addEventListener('click', _load_menu_js__WEBPACK_IMPORTED_MODULE_0__["default"]);
+    SCbtn.addEventListener('click', _load_menu_js__WEBPACK_IMPORTED_MODULE_0__["default"]);
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (populate);

@@ -123,5 +123,26 @@ header, #content {
         align-items: center;
         padding-bottom: 0;
     }
+    
+    #FCtext h3, #SCtext h3 {
+        margin-left: 10vw;
+        margin-right: 10vw;
+
+        font-size: 4vw;
+        text-align: center;
+    }
+
+    #FCtext p, #SCtext p {
+        margin-left: 10vw;
+        margin-right: 10vw;
+
+        font-size: 2vw;
+        text-align: center;
+
+    }
+    #FCtext button, #SCtext button {
+        font-size: 1.5vw;
+        margin-bottom: 10vh;
+    }
 
 }

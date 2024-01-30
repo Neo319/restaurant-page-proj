@@ -109,10 +109,6 @@ const populate = function () {
     const content = document.getElementById("content");
     content.innerHTML = ''; //wipe any existing content before loading 
 
-    //test
-    const temp = document.createElement("div");
-    temp.textContent = "content...";
-    content.appendChild(temp);
 
     
     //first image
@@ -128,14 +124,20 @@ const populate = function () {
     const firstCardText = document.createElement("div");
     const FCHeader = document.createElement("h3");
     const FCbody = document.createElement("p");
-    FCHeader.textContent = "Header";
-    FCbody.textContent = "lorem uspum sum doloret ... etc."
+    FCHeader.textContent = "BREAKFAST SANDWICH SPECIAL NOW 90% OFF!";
+    FCbody.textContent = "Don't miss out on the heavenly goodness of our french toast and berry breakfast sandwiches, now available for a limited time at 90% OFF!";
     firstCardText.id = "FCtext"
+
+    // order button 
+    const FCbtn = document.createElement('button');
+    FCbtn.id= "FCbtn";
+    FCbtn.textContent = "ORDER NOW";
+
     
     firstCardText.appendChild(FCHeader);
     firstCardText.appendChild(FCbody);
+    firstCardText.appendChild(FCbtn);
     firstCard.appendChild(firstCardText);
-
 
     firstCard.appendChild(firstCardImage);
     content.appendChild(firstCard);
@@ -150,7 +152,26 @@ const populate = function () {
     secondCardImage.classList = "food-img"
     secondCardImage.alt= "chicken noodle soup";
 
+    //second card text content
+    const secondCardText = document.createElement('div');
+    secondCardText.id = "SCtext";
+    const SCHeader = document.createElement('h3');
+    const SCBody = document.createElement('p');
+    SCHeader.textContent = "LUNCH OPTION HIGHLIGHTS";
+    SCBody.textContent = "Gift yourself with a savoury warm treat with our special lunch offers, including our special chicken noodle stew. ";
+
+
+    // extra menu button 
+    const SCbtn = document.createElement('button');
+    SCbtn.id= "SCbtn";
+    SCbtn.textContent = "VIEW MENU";
+
+    secondCardText.appendChild (SCHeader);
+    secondCardText.appendChild (SCBody);
+    secondCardText.appendChild (SCbtn);
+
     secondCard.appendChild(secondCardImage);
+    secondCard.appendChild(secondCardText);
     content.appendChild(secondCard);
 }
 

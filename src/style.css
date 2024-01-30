@@ -69,21 +69,38 @@ header, #content {
     margin: 20px;
 }
 
-#firstCard {
+#firstCard, #secondCard {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
+    padding: 20px;
+
 }
 
-#FCtext {
+#FCtext, #SCtext {
     position: absolute;
     color: white;
     z-index: 1;
 
-    font-size: 1.5em;
+    font-size: 0.9em;
     max-width: 85vw;
+
+    margin: 100px;
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+#FCtext h3, #SCtext h3 {
+    font-size: 1.3em;
+}
+
+#FCtext button, #SCtext button {
+    font-size: 1em;
+    padding: 10px;
 }
 
 

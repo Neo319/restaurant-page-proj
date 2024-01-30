@@ -1,16 +1,46 @@
 * {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-
+body {
+    margin: 0;
+}
 
 #logo {
     height: 100px;
     width: 100px;
 }
 
+header {
+    background-color: #637A9F;
+    padding-bottom: 1rem;
+}
 
+#content {
+    background-color: #C9D7DD;
+}
+
+
+.nav {
+    display: flex;
+    gap: 20px;
+}
+button {
+    padding: 1rem;
+    background-color: #C9D7DD;
+    font-weight: 700;
+    font-size: 1.2em;
+
+    border: 2px solid #637A9F;
+    border-radius: 25px;
+    color:#637A9F;
+}
+button:hover {
+    background-color: #E8C872;
+    color: white;
+    border: 2px solid black;
+}
 
 header, #content {
     display: flex;
@@ -47,6 +77,7 @@ header, #content {
 
 
 @media only screen and (min-width: 700px) {
+    
     .food-img {
         height: 70vh;
     }
@@ -54,4 +85,12 @@ header, #content {
         width: 10vw;
         height: 10vw;
     }
+
+    header {
+        flex-direction: row;
+        gap: 5vw;
+        align-items: center;
+        padding-bottom: 0;
+    }
+
 }

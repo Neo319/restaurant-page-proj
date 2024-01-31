@@ -4,7 +4,6 @@ import menu from './load-menu.js';
 
 
 const populate = function () {
-    console.log ("I'm here, from populate-content.js!")
     
     const content = document.getElementById("content");
     content.innerHTML = ''; //wipe any existing content before loading 

@@ -20,6 +20,8 @@ header {
 #content {
     background-color: #C9D7DD;
     min-height: 100vh;
+    padding-top: 5vh;
+    padding-bottom: 10vh;
 }
 
 #logoDiv {
@@ -29,7 +31,7 @@ header {
 }
 
 #logoDiv span {
-    color:#E8C872;
+    color: #E8C872;
     font-weight: 700;
     font-style: italic;
 }
@@ -38,6 +40,7 @@ header {
     display: flex;
     gap: 20px;
 }
+
 button {
     padding: 1rem;
     background-color: #C9D7DD;
@@ -46,15 +49,17 @@ button {
 
     border: 2px solid #637A9F;
     border-radius: 25px;
-    color:#637A9F;
+    color: #637A9F;
 }
+
 button:hover {
     background-color: #E8C872;
     color: white;
     border: 2px solid black;
 }
 
-header, #content {
+header,
+#content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -64,13 +69,14 @@ header, #content {
     filter: brightness(50%);
     border-radius: 5px;
     width: 85vw;
-    
+
     object-fit: cover;
     height: 35vh;
     margin: 20px;
 }
 
-#firstCard, #secondCard {
+#firstCard,
+#secondCard {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -80,7 +86,8 @@ header, #content {
 
 }
 
-#FCtext, #SCtext {
+#FCtext,
+#SCtext {
     position: absolute;
     color: white;
     z-index: 1;
@@ -95,30 +102,62 @@ header, #content {
     align-items: center;
 }
 
-#FCtext h3, #SCtext h3 {
+#FCtext h3,
+#SCtext h3 {
     font-size: 1.3em;
 }
 
-#FCtext button, #SCtext button {
+#FCtext button,
+#SCtext button {
     font-size: 1em;
     padding: 10px;
 }
 
+/* menu page */
 .menu-item {
     margin-left: 15vw;
     margin-right: 15vw;
 }
 
 
+/* about page */
+#about-page-image {
+    border-radius: 5px;
+    width: 70vw;
+
+    object-fit: cover;
+    height: 35vh;
+    margin: 20px;
+}
+
+#about-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    max-width: 60vw;
+}
+
+#rightPara {
+    max-width: 60vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
 @media only screen and (min-width: 700px) {
-    
+
     .food-img {
         height: 70vh;
     }
+
     #logo {
         width: 10vw;
         height: 10vw;
     }
+
     #logoDiv span {
         font-size: 1.6vw;
     }
@@ -129,8 +168,9 @@ header, #content {
         align-items: center;
         padding-bottom: 0;
     }
-    
-    #FCtext h3, #SCtext h3 {
+
+    #FCtext h3,
+    #SCtext h3 {
         margin-left: 10vw;
         margin-right: 10vw;
 
@@ -138,7 +178,8 @@ header, #content {
         text-align: center;
     }
 
-    #FCtext p, #SCtext p {
+    #FCtext p,
+    #SCtext p {
         margin-left: 10vw;
         margin-right: 10vw;
 
@@ -146,14 +187,36 @@ header, #content {
         text-align: center;
 
     }
-    #FCtext button, #SCtext button {
+
+    #FCtext button,
+    #SCtext button {
         font-size: 1.5vw;
         margin-bottom: 10vh;
     }
 
+    /* menu page */
     .menu-item {
         margin-left: 30vw;
         margin-right: 30vw;
+    }
+
+    /* about page */
+    #about-main {
+        flex-direction: row;
+        padding-left: 10vw;
+        padding-right: 10vw;
+        max-width: 80vw;
+        align-items:flex-start
+    }
+
+    #about-page-image {
+        width: 30vw;
+    }
+
+    #rightPara, #leftPara {
+        margin-left: 5px;
+        margin-right: 5px;
+        max-width: 30vw;
     }
 
 }
